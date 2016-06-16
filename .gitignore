@@ -1,0 +1,26 @@
+# Editor files
+.idea
+
+# Dependency directories
+-git
+node_modules
+bower_components
+
+# Build files
+build
+temp
+templates.js
+/src/configFile.js
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+.DS_Store
+
+# node-waf configuration
+.lock-wscript

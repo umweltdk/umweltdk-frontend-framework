@@ -1,0 +1,24 @@
+// @import 'helpers';
+
+$typl8-serif-boolean: false;
+$typl8-custom-font: #{$font-family};
+$typl8-heading-color: inherit;
+$typl8-paragraph-spacing: true;
+$typl8-font-weight: 300;
+$typl8-font-size: 100 !default;
+$typl8-line-height: 1.5 !default;
+
+@import 'typeplate-starter-kit/dist/scss/_typeplate-index';
+
+html {
+	font-size:85%;
+}
+
+h1, h2, h3 ,h4, h5, h6 {
+	letter-spacing  : 0.02em;
+	font-weight     : 700;
+	text-transform  : uppercase;
+	span {
+		font-weight:200;
+	}
+}

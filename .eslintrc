@@ -1,0 +1,34 @@
+{
+    "plugins": [
+        "eslint-plugin-angular"
+    ],
+    "rules": {
+        "indent": [
+            2,
+            "tab",
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "quotes": [
+            2,
+            "single"
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "no-unused-vars": 1,
+        "angular/controller-name": [
+            2,
+            "/.*Ctrl$/"
+        ],
+        "angular/module-setter": 0,
+        "angular/module-getter": 0
+    },
+    "env": {
+        "browser": true,
+        "commonjs": true
+    },
+    "extends": "eslint:recommended"
+}
