@@ -1,26 +1,13 @@
-@function palette($palette, $tone: 'base') {
-	@return map-get(map-get($palettes, $palette), $tone);
-}
+@import 'helpers';
 
-$palettes: (
-	base: (
-		base:	$_color-base,
-		light: lighten($_color-base, 10%),
-		dark: darken($_color-base, 10%)
-	),
-	beige: (
-		base:  $_color-base-beige,
-		light: lighten($_color-base-beige, 10%),
-		dark: darken($_color-base-beige, 10%)
-	),
-	pink: (
-		base:  $_color-base-pink,
-		light: lighten($_color-base-pink, 10%),
-		dark: darken($_color-base-pink, 10%)
-	),
-	blue: (
-		base:  $_color-base-blue,
-		light: lighten($_color-base-blue, 10%),
-		dark: darken($_color-base-blue, 10%)
-	)
-);
+@each $palette, $tones in $palettes {
+	.color-swatch--#{$palette} {
+		background-color:umwGetColor($palette);
+		&:after {
+			content:"#{$palette}";
+		}
+		&:hover {
+			background-color: umwGetColor($palette, dark);
+		}
+	}
+}

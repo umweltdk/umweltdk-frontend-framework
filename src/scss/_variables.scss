@@ -5,8 +5,15 @@ $_color-base-pink: #ff0056 !default;
 $_color-base-blue: #64a0c3 !default;
 
 // typography
-$font-family: "futura-pt" !default;
-$heading-font-family: $font-family !default;
-$monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
+$_font-family: "futura-pt", "Futura ND" !default;
+$_heading-font-family: $_font-family !default;
+$_monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
+$_paragraph-max-width : true !default;
 
+// spaces
+
+$_space-1 : .5rem !default;
+$_space-2 : 1rem !default;
+$_space-3 : 1.5rem !default;
+$_space-4 : 2rem !default;
 

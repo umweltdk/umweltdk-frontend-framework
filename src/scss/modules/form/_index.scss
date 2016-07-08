@@ -1,0 +1,132 @@
+// helpers
+
+$valid-namespace : 'ng-valid.ng-dirty' !default;
+
+.form-group {
+	position: relative;
+	margin: auto auto $typl8-indent-val;
+	border: 0;
+	min-width: 0;
+	padding: 0;
+
+	select,
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	textarea {
+		outline:0;
+		padding:$_space-2 $_space-1;
+		width:100%;
+	}
+
+	select {
+		border:1px solid umwGetColor(beige, light);
+		border-radius:$_space-1;
+		&[multiple] {
+			padding:0;
+		}
+	}
+
+	label {
+		will-change:transform opacity;
+		display:block;
+		cursor:pointer;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		font-weight:600;
+		padding:0 $_space-1;
+		transition: 200ms ease;
+		font-family:$_font-family;
+		color:umwGetColor(beige, base);
+		transition:200ms ease;
+		margin-bottom:$typl8-indent-val/2;
+	}
+
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"]{
+		@include placeholder {
+			opacity:1;
+			font-family:$_font-family;
+			color:umwGetColor(beige, base);
+			transition:200ms ease;
+			text-transform: uppercase;
+			letter-spacing: 0.02em;
+			font-weight:600;
+		}
+		border:1px solid umwGetColor(beige, light);
+		outline:0;
+		position: relative;
+		+ label {
+			margin-bottom:0;
+			font-size:$typl8-small-print-size;
+			position:absolute;
+			pointer-events:none;
+			top:0;
+			left:0;
+			color:transparent;
+		}
+
+
+		&:focus {
+			border-color:umwGetColor(beige, base);
+			@include placeholder {
+				font-size:$typl8-small-print-size;
+				opacity:0;
+				transform:translateY(-275%);
+			}
+
+			+ label{
+				color:currentColor;
+				transform:translateY(-125%);
+			}
+		}
+	}
+
+	&.radio,
+	&.checkbox {
+		label {
+			font-weight:300;
+			text-transform:none;
+			letter-spacing:inherit;
+			padding-left:0;
+			padding-right:0;
+			font-size:100%;
+			pointer-events:auto;
+			display:block;
+			color:currentColor;
+			position: relative;
+
+			& + label {
+				margin-top:$typl8-indent-val/2;
+			}
+
+			input[type="radio"],
+			input[type="checkbox"] {
+				margin-right:$typl8-indent-val/2;
+			}
+		}
+	}
+}

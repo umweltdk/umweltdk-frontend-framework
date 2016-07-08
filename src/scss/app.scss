@@ -1,9 +1,11 @@
 @charset 'UTF-8';
 /* Settings: Global variables, site-wide settings, config switches, etc. */
+@import 'helpers';
 @import 'variables';
 
 // resets
-@import 'sanitize.css/lib/sanitize.scss';
+@import 'sanitize.css/sanitize';
 
-@import 'modules/colors/index';
 @import 'modules/typography/index';
+@import 'modules/colors/index';
+@import 'modules/form/index';
