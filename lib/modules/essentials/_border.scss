@@ -82,10 +82,6 @@
  			.is-ready & {
  				transform:none;
  			}
-
- 			@supports (-webkit-appearance: none) {
- 				display:none !important;
- 			}
  		}
  	}
  }
