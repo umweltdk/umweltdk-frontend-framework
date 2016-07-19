@@ -8,11 +8,4 @@ html {
 	@supports (-webkit-appearance: none) {
 		overflow-y:scroll;
 	}
-
-	body {
-		padding:$border-width;
-		@media #{map-get($breakpoints, 'sm')} {
-			padding:$border-width * 2;
-		}
-	}
 }
