@@ -20,10 +20,10 @@
  %border--vertical {
  	top:0;
  	bottom:0;
- 	width:$border-width / 2;
+ 	width:$_border-width / 2;
  	height: 100%;
  	@media #{map-get($breakpoints, 'sm')} {
- 		width: $border-width;
+ 		width: $_border-width;
  	}
  }
 
@@ -31,9 +31,9 @@
  	left:0;
  	right:0;
  	width: 100%;
- 	height:$border-width / 2;
+ 	height:$_border-width / 2;
  	@media #{map-get($breakpoints, 'sm')} {
- 		height: $border-width;
+ 		height: $_border-width;
  	}
  }
 
@@ -47,7 +47,7 @@
  			@extend %border;
  			@extend %border--horisontal;
  			top: 0;
- 			transform:translate3d(0,-$border-width,0);
+ 			transform:translate3d(0,-$_border-width,0);
  			.wf-active &,
  			.is-ready & {
  				transform:none;
@@ -57,7 +57,7 @@
  			@extend %border;
  			@extend %border--horisontal;
  			bottom: 0;
- 			transform:translate3d(0,$border-width,0);
+ 			transform:translate3d(0,$_border-width,0);
  			.wf-active &,
  			.is-ready & {
  				transform:none;
@@ -67,7 +67,7 @@
  			@extend %border;
  			@extend %border--vertical;
  			left: 0;
- 			transform:translate3d(-$border-width,0,0);
+ 			transform:translate3d(-$_border-width,0,0);
  			.wf-active &,
  			.is-ready & {
  				transform:none;
@@ -77,7 +77,7 @@
  			@extend %border;
  			@extend %border--vertical;
  			right: 0;
- 			transform:translate3d($border-width,0,0);
+ 			transform:translate3d($_border-width,0,0);
  			.wf-active &,
  			.is-ready & {
  				transform:none;

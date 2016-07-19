@@ -1,8 +1,8 @@
 html {
-	@include scrollbars(($border-width / 2), palette(beige, base), color(white));
+	@include scrollbars(($_border-width / 2), palette(beige, base), color(white));
 
 	@media #{map-get($breakpoints, 'sm')} {
-		@include scrollbars($border-width, palette(beige, base), color(white));
+		@include scrollbars($_border-width, palette(beige, base), color(white));
 	}
 
 	@supports (-webkit-appearance: none) {

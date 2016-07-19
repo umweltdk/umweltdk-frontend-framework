@@ -926,9 +926,3 @@ html body {
 @supports (-webkit-appearance: none) {
   html {
     overflow-y: scroll; } }
-
-html body {
-  padding: 1.5em; }
-  @media (min-width: 40em) {
-    html body {
-      padding: 3em; } }
