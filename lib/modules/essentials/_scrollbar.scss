@@ -1,0 +1,18 @@
+html {
+	@include scrollbars(($border-width / 2), palette(beige, base), color(white));
+
+	@media #{map-get($breakpoints, 'sm')} {
+		@include scrollbars($border-width, palette(beige, base), color(white));
+	}
+
+	@supports (-webkit-appearance: none) {
+		overflow-y:scroll;
+	}
+
+	body {
+		padding:$border-width;
+		@media #{map-get($breakpoints, 'sm')} {
+			padding:$border-width * 2;
+		}
+	}
+}

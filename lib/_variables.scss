@@ -1,3 +1,14 @@
+// Breakpoints
+$breakpoint-sm: '(min-width: 40em)' !default;
+$breakpoint-md: '(min-width: 52em)' !default;
+$breakpoint-lg: '(min-width: 64em)' !default;
+
+$breakpoints: (
+  'sm' : $breakpoint-sm,
+  'md': $breakpoint-md,
+  'lg' : $breakpoint-lg
+);
+
 // colors
 $_color-base: #282828 !default;
 $_color-base-beige: #c5c2bb !default;
@@ -8,10 +19,10 @@ $_color-base-blue: #64a0c3 !default;
 $_font-family: "futura-pt", "Futura ND" !default;
 $_heading-font-family: $_font-family !default;
 $_monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
-$_paragraph-max-width : true !default;
+$_paragraph-max-width : 36 !default;
 
 // spaces
-
+$border-width: 1.5em !default;
 $_space-1 : .5rem !default;
 $_space-2 : 1rem !default;
 $_space-3 : 1.5rem !default;

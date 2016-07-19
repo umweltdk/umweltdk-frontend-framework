@@ -31,7 +31,7 @@ $valid-namespace : 'ng-valid.ng-dirty' !default;
 	}
 
 	select {
-		border:1px solid umwGetColor(beige, light);
+		border:1px solid palette(beige, light);
 		border-radius:$_space-1;
 		&[multiple] {
 			padding:0;
@@ -48,7 +48,7 @@ $valid-namespace : 'ng-valid.ng-dirty' !default;
 		padding:0 $_space-1;
 		transition: 200ms ease;
 		font-family:$_font-family;
-		color:umwGetColor(beige, base);
+		color:palette(beige, base);
 		transition:200ms ease;
 		margin-bottom:$typl8-indent-val/2;
 	}
@@ -70,13 +70,13 @@ $valid-namespace : 'ng-valid.ng-dirty' !default;
 		@include placeholder {
 			opacity:1;
 			font-family:$_font-family;
-			color:umwGetColor(beige, base);
+			color:palette(beige, base);
 			transition:200ms ease;
 			text-transform: uppercase;
 			letter-spacing: 0.02em;
 			font-weight:600;
 		}
-		border:1px solid umwGetColor(beige, light);
+		border:1px solid palette(beige, light);
 		outline:0;
 		position: relative;
 		+ label {
@@ -91,7 +91,7 @@ $valid-namespace : 'ng-valid.ng-dirty' !default;
 
 
 		&:focus {
-			border-color:umwGetColor(beige, base);
+			border-color:palette(beige, base);
 			@include placeholder {
 				font-size:$typl8-small-print-size;
 				opacity:0;

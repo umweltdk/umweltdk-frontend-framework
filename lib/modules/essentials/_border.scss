@@ -1,0 +1,92 @@
+/**
+ *
+<div class="borders">
+	<div class="border--top"></div>
+	<div class="border--bottom"></div>
+	<div class="border--left"></div>
+	<div class="border--right"></div>
+</div>
+ */
+
+ %border {
+ 	position: fixed;
+ 	z-index: 2;
+ 	background: color(white);
+ 	transition:all 640ms cubic-bezier(.785,.135,.15,.86);
+ 	backface-visibility : hidden;
+ 	will-change 		: transform;
+ }
+
+ %border--vertical {
+ 	top:0;
+ 	bottom:0;
+ 	width:$border-width / 2;
+ 	height: 100%;
+ 	@media #{map-get($breakpoints, 'sm')} {
+ 		width: $border-width;
+ 	}
+ }
+
+ %border--horisontal {
+ 	left:0;
+ 	right:0;
+ 	width: 100%;
+ 	height:$border-width / 2;
+ 	@media #{map-get($breakpoints, 'sm')} {
+ 		height: $border-width;
+ 	}
+ }
+
+ .borders {
+ 	@media #{map-get($breakpoints, 'sm')} {
+ 		display:block;
+ 	}
+
+ 	.border {
+ 		&--top {
+ 			@extend %border;
+ 			@extend %border--horisontal;
+ 			top: 0;
+ 			transform:translate3d(0,-$border-width,0);
+ 			.wf-active &,
+ 			.is-ready & {
+ 				transform:none;
+ 			}
+ 		}
+ 		&--bottom {
+ 			@extend %border;
+ 			@extend %border--horisontal;
+ 			bottom: 0;
+ 			transform:translate3d(0,$border-width,0);
+ 			.wf-active &,
+ 			.is-ready & {
+ 				transform:none;
+ 			}
+ 		}
+ 		&--left {
+ 			@extend %border;
+ 			@extend %border--vertical;
+ 			left: 0;
+ 			transform:translate3d(-$border-width,0,0);
+ 			.wf-active &,
+ 			.is-ready & {
+ 				transform:none;
+ 			}
+ 		}
+ 		&--right {
+ 			@extend %border;
+ 			@extend %border--vertical;
+ 			right: 0;
+ 			transform:translate3d($border-width,0,0);
+ 			.wf-active &,
+ 			.is-ready & {
+ 				transform:none;
+ 			}
+
+ 			@supports (-webkit-appearance: none) {
+ 				display:none !important;
+ 			}
+ 		}
+ 	}
+ }
+

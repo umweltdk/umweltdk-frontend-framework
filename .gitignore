@@ -6,11 +6,6 @@
 node_modules
 bower_components
 
-# Build files
-build
-temp
-templates.js
-/src/configFile.js
 
 # Logs
 logs

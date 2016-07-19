@@ -1,0 +1,40 @@
+@function color($color) {
+	@return map-get($colors, $color);
+}
+
+@function palette($palette, $tone: 'base') {
+	@return map-get(map-get($palettes, $palette), $tone);
+}
+
+$colors: (
+	black: 	#000,
+	white: 	#fff,
+	// palettes
+	base: 	$_color-base,
+	beige: 	$_color-base-beige,
+	pink: 	$_color-base-pink,
+	blue: 	$_color-base-blue,
+);
+
+$palettes: (
+	base: (
+		base:	color(base),
+		light: lighten(color(base), 10%),
+		dark: darken(color(base), 10%)
+	),
+	beige: (
+		base:  color(beige),
+		light: lighten(color(beige), 10%),
+		dark: darken(color(beige), 10%)
+	),
+	pink: (
+		base:  color(pink),
+		light: lighten(color(pink), 10%),
+		dark: darken(color(pink), 10%)
+	),
+	blue: (
+		base:  color(blue),
+		light: lighten(color(blue), 10%),
+		dark: darken(color(blue), 10%)
+	)
+);

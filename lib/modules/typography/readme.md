@@ -1,6 +1,20 @@
 
 Change typographic weights, styles, and alignment with these utility styles.
 
+## Adobe Typekit
+```js
+(function(d) {
+  var config = {
+    kitId: 'bjn2gfu',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+```
+
+## Utilities
+
 ```html
 <p class="bold">Bold</p>
 <p class="regular">Regular</p>
@@ -34,10 +48,10 @@ To remove default list styling, use `.list-reset`.
 To set lists inline, use utilities.
 
 ```html
-<ul class="list-reset">
-  <li class="inline-block mr1">Half-Smoke</li>
-  <li class="inline-block mr1">Kielbasa</li>
-  <li class="inline-block mr1">Bologna</li>
-  <li class="inline-block mr1">Prosciutto</li>
+<ul class="list-inline">
+  <li>Half-Smoke</li>
+  <li>Kielbasa</li>
+  <li>Bologna</li>
+  <li>Prosciutto</li>
 </ul>
 ```
