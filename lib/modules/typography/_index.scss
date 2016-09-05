@@ -1,5 +1,3 @@
-@import 'helpers';
-
 $typl8-serif-boolean: false;
 $typl8-custom-font: #{$_font-family};
 $typl8-heading-color: inherit;
@@ -11,7 +9,7 @@ $typl8-line-height: 1.5;
 @import 'typeplate-starter-kit/dist/scss/_typeplate-index';
 
 h1, h2, h3 ,h4, h5, h6 {
-	@extend .caps;
+	text-transform: uppercase; letter-spacing: 0.02em;
 	font-weight     : 700;
 	span {
 		font-weight:200;

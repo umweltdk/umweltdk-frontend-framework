@@ -89,7 +89,6 @@ $valid-namespace : 'ng-valid.ng-dirty' !default;
 			color:transparent;
 		}
 
-
 		&:focus {
 			border-color:palette(beige, base);
 			@include placeholder {

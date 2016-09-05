@@ -1,15 +1,16 @@
 {
   "name": "umweltdk-frontend-framework",
   "description": "A low level SASS based CSS framework for general usage on Umwelt.dk projects",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "private": true,
   "bugs": {
     "url": "https://github.com/umweltdk/umweltdk-frontend-framework/issues",
     "email": "kwa@umwelt.dk"
   },
-  "main": "dist/app.scss",
+  "main": "lib/app.scss",
   "scripts": {
-    "dev": "gulp build"
+    "dev": "gulp build",
+    "docs": "gulp docs"
   },
   "engines": {
     "node": ">=4.2.3",
@@ -27,11 +28,9 @@
   ],
   "license": "UNLICENSED",
   "devDependencies": {
-    "del": "^2.2.1",
+    "del": "^2.2.2",
     "gulp": "3.9.1",
-    "gulp-sass": "2.3.2",
-    "sanitize.css": "4.1.0",
-    "typeplate-starter-kit": "^3.0.2"
+    "gulp-sass": "2.3.2"
   },
   "keywords": [
     "atomic css",
@@ -39,5 +38,9 @@
     "css",
     "framework",
     "oocss"
-  ]
+  ],
+  "dependencies": {
+    "sanitize.css": "^4.1.0",
+    "typeplate-starter-kit": "^3.0.2"
+  }
 }
