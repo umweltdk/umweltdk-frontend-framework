@@ -16,7 +16,7 @@ npm i umweltdk/umweltdk-frontend-framework --save
 
 ### Update 
 ```
-npm update
+npm update umweltdk/umweltdk-frontend-framework
 ```
 
 ### Import the `framework` to your projects.
