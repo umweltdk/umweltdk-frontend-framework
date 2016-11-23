@@ -6,7 +6,7 @@ Change typographic weights, styles, and alignment with these utility styles.
 ```js
 (function(d) {
   var config = {
-    kitId: 'bjn2gfu',
+    kitId: 'wjw4xnk',
     scriptTimeout: 3000,
     async: true
   },

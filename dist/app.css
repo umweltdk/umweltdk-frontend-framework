@@ -748,9 +748,9 @@ p + .typl8-drop-cap {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-weight: 700; }
+  font-weight: 800; }
   h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
-    font-weight: 200; }
+    font-weight: 700; }
 
 p {
   margin-left: 0;
