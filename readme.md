@@ -9,16 +9,14 @@ You can find the usage at [Umwelt Sample](https://github.com/umweltdk/umweltdk-f
 ## Installation
 Umwelt Framework can directly install your project by copying the contents of lib folder to your assets, or you can install it as [npm](https://www.npmjs.org/)package.
 
-### Install as local npm
-```
-git clone git@github.com:umweltdk/umweltdk-frontend-framework.git
-cd umweltdk-frontend-framework
-npm link
-```
-
 ### Install to your project
 ```
-npm i umweltdk-frontend-framework --save
+npm i umweltdk/umweltdk-frontend-framework --save
+```
+
+### Update 
+```
+npm update
 ```
 
 ### Import the `framework` to your projects.
