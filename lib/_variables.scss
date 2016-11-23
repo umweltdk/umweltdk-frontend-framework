@@ -2,11 +2,13 @@
 $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
+$breakpoint-xl: '(min-width: 2600px)' !default;
 
 $breakpoints: (
   'sm' : $breakpoint-sm,
   'md': $breakpoint-md,
-  'lg' : $breakpoint-lg
+  'lg' : $breakpoint-lg,
+	'xl' : $breakpoint-xl
 );
 
 // colors
