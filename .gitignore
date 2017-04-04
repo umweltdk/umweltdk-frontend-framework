@@ -1,10 +1,12 @@
+# Styleguide
+styleguide
+
 # Editor files
 .idea
 
 # Dependency directories
 -git
 node_modules
-bower_components
 
 
 # Logs
