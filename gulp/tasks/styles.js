@@ -7,38 +7,24 @@ var gulpif = require('gulp-if');
 var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
 var styleGuide = require('postcss-style-guide');
+var cssnano = require('gulp-cssnano');
 
-gulp.task('scss', function() {
+gulp.task('styles', function() {
 	return gulp.src(config.paths.entry)
 		.pipe(sass({
 			includePaths: [
-				'node_modules/',
-				'bower_components/'
+				'node_modules/'
 			],
 		})).on('error', sass.logError)
-		.pipe(postcss([
+		.pipe(gulpif(!global.isProd, postcss([
 			styleGuide({
 				themePath: 'styleguide-theme',
-				project: 'Hive Frontend',
-				dest: 'dist/index.html',
-				showCode: true,
+				dest: 'styleguide/index.html'
 			})
-		]))
+		]), cssnano()))
+		.pipe(gulp.dest(config.paths.dest))
 		.pipe(gulpif(browserSync.active, browserSync.reload({
-			stream: true
+			stream: true,
+			once: true
 		})));
-});
-
-gulp.task('serve', ['scss'], function(){
-	browserSync.init({
-		server: {
-			baseDir: config.paths.dest
-		}
-	});
-});
-
-gulp.task('build', ['serve'], function() {
-	// Start watching changes and update styleguide whenever changes are detected
-	// Styleguide automatically detects existing server instance
-	gulp.watch([config.paths.all], ['scss']);
 });
