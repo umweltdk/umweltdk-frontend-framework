@@ -7,6 +7,9 @@
 		<%= projectName %>
 	</title>
 
+	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="dns-prefetch" href="//use.typekit.net">
+
 	<script>
 		WebFontConfig = {
 			typekit: {
@@ -17,7 +20,7 @@
 		(function(d) {
 			var wf = d.createElement('script'),
 				s = d.scripts[0];
-			wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+			wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1.6.27/webfont.js';
 			wf.async = true;
 			s.parentNode.insertBefore(wf, s);
 		})(document);
@@ -32,22 +35,22 @@
 	<div class="psg-wrapper">
 		<nav class="psg-menu">
 			<h1 class="psg-projectName"><%= projectName %></h1>
-				<ul class="psg-componentList">
-					<% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
-						<a href="#color-palette" class="psg-componentList-item">
-							<li>Color Palette</li>
-						</a>
-						<% } %>
-							<% maps.forEach(function (map) { %>
-								<% if (map.link.title !== null) { %>
-									<a href="#<%= map.link.id %>" title="<%= map.link.title %>" class="psg-componentList-item">
-										<li>
-											<%= map.link.title %>
-										</li>
-									</a>
-									<% } %>
-										<% }) %>
-				</ul>
+			<ul class="psg-componentList">
+				<% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
+					<a href="#color-palette" class="psg-componentList-item">
+						<li>Color Palette</li>
+					</a>
+					<% } %>
+						<% maps.forEach(function (map) { %>
+							<% if (map.link.title !== null) { %>
+								<a href="#<%= map.link.id %>" title="<%= map.link.title %>" class="psg-componentList-item">
+									<li>
+										<%= map.link.title %>
+									</li>
+								</a>
+								<% } %>
+									<% }) %>
+			</ul>
 		</nav>
 
 		<div class="psg-main">
@@ -84,7 +87,7 @@
 										<div class="psg-contents-rule">
 											<pre><code class="lang-css"><%- map.rule %></code></pre>
 										</div>
-									<% } %>
+										<% } %>
 								</div>
 							</section>
 							<% }) %>
@@ -93,7 +96,6 @@
 		</div>
 
 	</div>
-
 </body>
 
 </html>
