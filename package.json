@@ -28,19 +28,16 @@
   ],
   "license": "UNLICENSED",
   "devDependencies": {
-    "browser-sync": "^2.18.8",
+    "browser-sync": "2.18.8",
     "del": "2.2.2",
-    "git-guppy": "^2.1.0",
     "gulp": "3.9.1",
-    "gulp-cssnano": "^2.1.2",
+    "gulp-cssnano": "2.1.2",
     "gulp-if": "2.0.2",
     "gulp-postcss": "6.4.0",
     "gulp-sass": "3.1.0",
-    "install": "^0.8.8",
-    "npm": "^4.4.4",
     "postcss-scss": "0.4.1",
     "postcss-style-guide": "0.13.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "1.2.2"
   },
   "keywords": [
     "atomic css",
