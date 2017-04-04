@@ -10,7 +10,7 @@
   "main": "lib/app.scss",
   "scripts": {
     "dev": "gulp dev",
-    "prod": "gulp pre-commit"
+    "prod": "gulp prod"
   },
   "engines": {
     "node": ">=4.2.3",
