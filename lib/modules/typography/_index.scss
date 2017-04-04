@@ -1,3 +1,30 @@
+/*
+@styleguide
+
+@title Typography
+
+Use the button classes on and `<a>`, `<button>`, `<input>` elements.
+
+<h1>Heading 1</h1>
+
+    <h1>Heading 1</h1>
+
+<h2>Heading 1</h2>
+
+    <h2>Heading 2</h2>
+*/
+
+
+a.button.star{
+  background-color:gold;
+  &.star-given{
+  	outline:1px solid;
+  }
+  &.disabled{
+		opacity:0.25;
+  }
+}
+
 $typl8-serif-boolean: false;
 $typl8-custom-font: #{$_font-family};
 $typl8-heading-color: inherit;
