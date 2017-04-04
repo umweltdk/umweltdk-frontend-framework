@@ -4,7 +4,7 @@ var browserSync = require('browser-sync');
 var config = require('../config');
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
-var postcss = require('gulp-postcss')
+var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
 var styleGuide = require('postcss-style-guide');
 
@@ -18,7 +18,7 @@ gulp.task('scss', function() {
 		})).on('error', sass.logError)
 		.pipe(postcss([
 			styleGuide({
-				themePath: 'node_modules/psg-theme-minimal',
+				themePath: 'styleguide-theme',
 				project: 'Hive Frontend',
 				dest: 'dist/index.html',
 				showCode: true,

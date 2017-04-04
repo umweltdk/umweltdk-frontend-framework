@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="psg-theme" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		<%= projectName %>
+	</title>
+
+	<script>
+		WebFontConfig = {
+			typekit: {
+				id: 'wjw4xnk'
+			}
+		};
+
+		(function(d) {
+			var wf = d.createElement('script'),
+				s = d.scripts[0];
+			wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+			wf.async = true;
+			s.parentNode.insertBefore(wf, s);
+		})(document);
+	</script>
+
+	<style>
+		<%- codeStyle %><%- tmplStyle %><%- processedCSS %>
+	</style>
+</head>
+
+<body>
+	<div class="psg-wrapper">
+		<nav class="psg-menu">
+			<h1 class="psg-projectName"><%= projectName %></h1>
+				<ul class="psg-componentList">
+					<% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
+						<a href="#color-palette" class="psg-componentList-item">
+							<li>Color Palette</li>
+						</a>
+						<% } %>
+							<% maps.forEach(function (map) { %>
+								<% if (map.link.title !== null) { %>
+									<a href="#<%= map.link.id %>" title="<%= map.link.title %>" class="psg-componentList-item">
+										<li>
+											<%= map.link.title %>
+										</li>
+									</a>
+									<% } %>
+										<% }) %>
+				</ul>
+		</nav>
+
+		<div class="psg-main">
+			<div class="psg-container">
+				<% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
+					<section class="psg-component">
+						<h2 id="color-palette" class="psg-componentTitle">Color Palette</h2>
+						<div class="psg-contents">
+							<div class="psg-colorPalette">
+								<% colorPalette.forEach(function (palette) { %>
+									<div class="psg-colorBox">
+										<div class="psg-colorBox-sample" style="background-color: <%= palette.color %>">
+										</div>
+										<div class="psg-colorBox-color">
+											<code><%= palette.color %></code>
+										</div>
+										<div class="psg-colorBox-name">
+											<code>$<%= palette.name %></code>
+										</div>
+									</div>
+									<% }) %>
+							</div>
+						</div>
+					</section>
+					<% } %>
+						<% maps.forEach(function (map) { %>
+							<section class="psg-component">
+								<h2 id="<%= map.link.id %>" class="psg-componentTitle"><%= map.link.title %></h2>
+								<div class="psg-contents">
+									<div class="psg-contents-html">
+										<%- map.html %>
+									</div>
+									<% if(map.rule.length !== 0 ) { %>
+										<div class="psg-contents-rule">
+											<pre><code class="lang-css"><%- map.rule %></code></pre>
+										</div>
+									<% } %>
+								</div>
+							</section>
+							<% }) %>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

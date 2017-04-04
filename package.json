@@ -37,8 +37,7 @@
     "install": "^0.8.8",
     "npm": "^4.4.4",
     "postcss-scss": "0.4.1",
-    "postcss-style-guide": "0.13.0",
-    "psg-theme-minimal": "^0.1.0"
+    "postcss-style-guide": "0.13.0"
   },
   "keywords": [
     "atomic css",

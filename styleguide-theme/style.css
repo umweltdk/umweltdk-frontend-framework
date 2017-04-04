@@ -1,0 +1,135 @@
+body {
+	margin: 0;
+	color:#000;
+}
+
+html, body {
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.psg-wrapper {
+	display: flex;
+	height: 100%;
+}
+
+.psg-menu {
+	width: 240px;
+	height: 100%;
+	border-right: 1px solid #ddd;
+	overflow-y: scroll;
+}
+
+.psg-menu,
+.psg-main {
+	 padding: 1rem 2rem;
+}
+
+.psg-projectName, .psg-componentTitle {
+	font-size: 2rem;
+}
+
+.psg-projectName {
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+
+.psg-componentList {
+	padding:0;
+	margin:0;
+}
+
+.psg-componentList-item {
+	display: block;
+	padding: 0;
+	color:#000;
+	text-decoration:none;
+}
+
+.psg-main {
+	flex: 1 1 0%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.psg-container, .psg-footer {
+	margin: 3rem 0;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.psg-component > h2 {
+	margin-top:0;
+	position:relative;
+}
+.psg-component > h2:before {
+	content:"";
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:-2rem;
+	width:.5em;
+	background-color:#000;
+}
+.psg-component + .psg-component {
+	margin-top:4rem;
+}
+
+
+.psg-componentTitle {
+		margin: 3rem 0;
+}
+.psg-contents-html code {
+	padding:1px 4px;
+	background-color: #f6f6f6;
+	font-family: FiraCode-Regular, monospace;
+}
+.psg-contents-html>pre, .psg-contents-rule>pre {
+	margin: 2rem 0;
+	overflow: auto;
+	background-color: #f6f6f6;
+	padding: 1rem;
+	position: relative;
+}
+
+.psg-colorPalette {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
+}
+
+.psg-colorBox {
+	width: calc(25% - 2rem);
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
+	margin: 1rem;
+}
+
+.psg-colorBox-sample {
+	height: 160px;
+}
+
+.psg-colorBox-color, .psg-colorBox-name {
+	font-size: .875rem;
+	padding-left: .75rem;
+	padding-right: .75rem;
+}
+.psg-colorBox-color code,
+.psg-colorBox-name code {
+	padding:1px 4px;
+	background-color: #f6f6f6;
+	font-family: FiraCode-Regular, monospace;
+}
+
+.psg-colorBox-color {
+	padding-top: 1rem;
+}
+
+.psg-colorBox-name {
+	padding-bottom: 1rem;
+}
+
+.psg-footer {
+	font-size: .875rem;
+	padding-bottom: 2.5rem;
+}
