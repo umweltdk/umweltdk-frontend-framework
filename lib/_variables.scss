@@ -11,20 +11,19 @@ $breakpoints: (
 	'xl' : $breakpoint-xl
 );
 
+/* @start color */
 $_color-base: #282828 !default;
 $_color-base-beige: #c5c2bb !default;
 $_color-base-pink: #ff0056 !default;
 $_color-base-blue: #64a0c3 !default;
+/* @end color */
 
-/*
-	For styleguide only
-	@start color
-*/
+/* @start color */
 :root {
-	--_color-base: #282828;
-	--_color-base-beige: #c5c2bb;
-	--_color-base-pink: #ff0056;
-	--_color-base-blue: #64a0c3;
+	--_color-base: $_color-base;
+	--_color-base-beige: $_color-base-beige;
+	--_color-base-pink: $_color-base-pink;
+	--_color-base-blue: $_color-base-blue;
 }
 /* @end color */
 
