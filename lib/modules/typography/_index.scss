@@ -1,42 +1,22 @@
-/*
-@styleguide
-
-@title Typography
-
-Some fancy text about the font, and vertical-rythm..
-
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 4</h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia explicabo tenetur illo nam sequi sit, perspiciatis dolorum, qui aspernatur quas iusto repellat. Asperiores quas voluptatibus atque, eligendi eos laboriosam.</p>
-*/
-
-
+@charset 'UTF-8';
 @import 'typi/scss/typi';
 @include typi-init;
-// $typl8-serif-boolean: false;
-// $typl8-custom-font: #{$_font-family};
-// $typl8-heading-color: inherit;
-// $typl8-paragraph-spacing: true;
-// $typl8-font-weight: 300;
-// $typl8-font-size: 100;
-// $typl8-line-height: 1.5;
 
-// @import 'typeplate-starter-kit/dist/scss/_typeplate-index';
-//
-// h1, h2, h3 ,h4, h5, h6 {
-// 	text-transform: uppercase; letter-spacing: 0.02em;
-// 	font-weight     : 700;
-// 	span {
-// 		font-weight:500;
-// 	}
-// }
-//
-// @if($_paragraph-max-width) {
-// 	p {
-// 		margin-left:0;
-// 		max-width:($_paragraph-max-width * 1em);
-// 	}
-// }
+body {
+	@include ff(primary, $typefaces);
+}
+
+h1, h2, h3 ,h4, h5, h6 {
+	text-transform: uppercase; letter-spacing: 0.02em;
+	font-weight     : 700;
+	span {
+		font-weight:500;
+	}
+}
+
+pre, code {
+	@include ff(monospace, $typefaces);
+	background-color: palette(beige);
+	padding:2px 4px;
+	border-radius:2px;
+}

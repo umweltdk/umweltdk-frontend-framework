@@ -1,15 +1,4 @@
-@charset "UTF-8";
 /* Settings: Global variables, site-wide settings, config switches, etc. */
-/* @start color */
-/* @end color */
-/* @start color */
-:root {
-  --_color-base: #282828;
-  --_color-base-beige: #c5c2bb;
-  --_color-base-pink: #ff0056;
-  --_color-base-blue: #64a0c3; }
-
-/* @end color */
 /*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 /* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
    ========================================================================== */
@@ -525,283 +514,271 @@ textarea,
   cursor: default; }
 
 /*
-@styleguide
-
-@title Typography
-
-Some fancy text about the font, and vertical-rythm..
-
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 4</h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia explicabo tenetur illo nam sequi sit, perspiciatis dolorum, qui aspernatur quas iusto repellat. Asperiores quas voluptatibus atque, eligendi eos laboriosam.</p>
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
 */
-/*!
-Typeplate : Starter Kit
-URL ........... http://typeplate.com
-Version ....... 3.0.2
-Github ........ https://github.com/typeplate/starter-kit
-Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-License ....... Creative Commmons Attribution 3.0
-License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
-*/
-@font-face {
-  font-family: "Ampersand";
-  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
-  unicode-range: U+0026; }
+[class*="col-"] {
+  width: 100%;
+  float: left; }
 
-@font-face {
-  font-family: "Ampersand";
-  src: local("Georgia");
-  unicode-range: U+270C; }
+.col-1 {
+  width: 1200%; }
 
-.typl8-tera, .typl8-giga, .typl8-mega, h1, .typl8-alpha, h2, .typl8-beta, h3, .typl8-gamma, h4, .typl8-delta, h5, .typl8-epsilon, .typl8-zeta, h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-  color: inherit; }
+.col-2 {
+  width: 600%; }
 
-blockquote + figcaption cite {
-  display: block;
-  font-size: inherit;
-  text-align: right; }
+.col-3 {
+  width: 400%; }
 
-body {
-  word-wrap: break-word; }
+.col-4 {
+  width: 300%; }
 
-pre code {
-  word-wrap: normal; }
+.col-5 {
+  width: 240%; }
+
+.col-6 {
+  width: 200%; }
+
+.col-7 {
+  width: 171.42857%; }
+
+.col-8 {
+  width: 150%; }
+
+.col-9 {
+  width: 133.33333%; }
+
+.col-10 {
+  width: 120%; }
+
+.col-11 {
+  width: 109.09091%; }
+
+.col-12 {
+  width: 100%; }
+
+@media (min-width: 40em) {
+  .sm-col-1 {
+    width: 1200%; }
+  .sm-offset-1 {
+    margin-left: 1200%; }
+  .sm-col-2 {
+    width: 600%; }
+  .sm-offset-2 {
+    margin-left: 600%; }
+  .sm-col-3 {
+    width: 400%; }
+  .sm-offset-3 {
+    margin-left: 400%; }
+  .sm-col-4 {
+    width: 300%; }
+  .sm-offset-4 {
+    margin-left: 300%; }
+  .sm-col-5 {
+    width: 240%; }
+  .sm-offset-5 {
+    margin-left: 240%; }
+  .sm-col-6 {
+    width: 200%; }
+  .sm-offset-6 {
+    margin-left: 200%; }
+  .sm-col-7 {
+    width: 171.42857%; }
+  .sm-offset-7 {
+    margin-left: 171.42857%; }
+  .sm-col-8 {
+    width: 150%; }
+  .sm-offset-8 {
+    margin-left: 150%; }
+  .sm-col-9 {
+    width: 133.33333%; }
+  .sm-offset-9 {
+    margin-left: 133.33333%; }
+  .sm-col-10 {
+    width: 120%; }
+  .sm-offset-10 {
+    margin-left: 120%; }
+  .sm-col-11 {
+    width: 109.09091%; }
+  .sm-offset-11 {
+    margin-left: 109.09091%; }
+  .sm-col-12 {
+    width: 100%; }
+  .sm-offset-12 {
+    margin-left: 100%; } }
+
+@media (min-width: 52em) {
+  .md-col-1 {
+    width: 1200%; }
+  .md-offset-1 {
+    margin-left: 1200%; }
+  .md-col-2 {
+    width: 600%; }
+  .md-offset-2 {
+    margin-left: 600%; }
+  .md-col-3 {
+    width: 400%; }
+  .md-offset-3 {
+    margin-left: 400%; }
+  .md-col-4 {
+    width: 300%; }
+  .md-offset-4 {
+    margin-left: 300%; }
+  .md-col-5 {
+    width: 240%; }
+  .md-offset-5 {
+    margin-left: 240%; }
+  .md-col-6 {
+    width: 200%; }
+  .md-offset-6 {
+    margin-left: 200%; }
+  .md-col-7 {
+    width: 171.42857%; }
+  .md-offset-7 {
+    margin-left: 171.42857%; }
+  .md-col-8 {
+    width: 150%; }
+  .md-offset-8 {
+    margin-left: 150%; }
+  .md-col-9 {
+    width: 133.33333%; }
+  .md-offset-9 {
+    margin-left: 133.33333%; }
+  .md-col-10 {
+    width: 120%; }
+  .md-offset-10 {
+    margin-left: 120%; }
+  .md-col-11 {
+    width: 109.09091%; }
+  .md-offset-11 {
+    margin-left: 109.09091%; }
+  .md-col-12 {
+    width: 100%; }
+  .md-offset-12 {
+    margin-left: 100%; } }
+
+@media (min-width: 64em) {
+  .lg-col-1 {
+    width: 1200%; }
+  .lg-offset-1 {
+    margin-left: 1200%; }
+  .lg-col-2 {
+    width: 600%; }
+  .lg-offset-2 {
+    margin-left: 600%; }
+  .lg-col-3 {
+    width: 400%; }
+  .lg-offset-3 {
+    margin-left: 400%; }
+  .lg-col-4 {
+    width: 300%; }
+  .lg-offset-4 {
+    margin-left: 300%; }
+  .lg-col-5 {
+    width: 240%; }
+  .lg-offset-5 {
+    margin-left: 240%; }
+  .lg-col-6 {
+    width: 200%; }
+  .lg-offset-6 {
+    margin-left: 200%; }
+  .lg-col-7 {
+    width: 171.42857%; }
+  .lg-offset-7 {
+    margin-left: 171.42857%; }
+  .lg-col-8 {
+    width: 150%; }
+  .lg-offset-8 {
+    margin-left: 150%; }
+  .lg-col-9 {
+    width: 133.33333%; }
+  .lg-offset-9 {
+    margin-left: 133.33333%; }
+  .lg-col-10 {
+    width: 120%; }
+  .lg-offset-10 {
+    margin-left: 120%; }
+  .lg-col-11 {
+    width: 109.09091%; }
+  .lg-offset-11 {
+    margin-left: 109.09091%; }
+  .lg-col-12 {
+    width: 100%; }
+  .lg-offset-12 {
+    margin-left: 100%; } }
+
+@media (min-width: 2600px) {
+  .xl-col-1 {
+    width: 1200%; }
+  .xl-offset-1 {
+    margin-left: 1200%; }
+  .xl-col-2 {
+    width: 600%; }
+  .xl-offset-2 {
+    margin-left: 600%; }
+  .xl-col-3 {
+    width: 400%; }
+  .xl-offset-3 {
+    margin-left: 400%; }
+  .xl-col-4 {
+    width: 300%; }
+  .xl-offset-4 {
+    margin-left: 300%; }
+  .xl-col-5 {
+    width: 240%; }
+  .xl-offset-5 {
+    margin-left: 240%; }
+  .xl-col-6 {
+    width: 200%; }
+  .xl-offset-6 {
+    margin-left: 200%; }
+  .xl-col-7 {
+    width: 171.42857%; }
+  .xl-offset-7 {
+    margin-left: 171.42857%; }
+  .xl-col-8 {
+    width: 150%; }
+  .xl-offset-8 {
+    margin-left: 150%; }
+  .xl-col-9 {
+    width: 133.33333%; }
+  .xl-offset-9 {
+    margin-left: 133.33333%; }
+  .xl-col-10 {
+    width: 120%; }
+  .xl-offset-10 {
+    margin-left: 120%; }
+  .xl-col-11 {
+    width: 109.09091%; }
+  .xl-offset-11 {
+    margin-left: 109.09091%; }
+  .xl-col-12 {
+    width: 100%; }
+  .xl-offset-12 {
+    margin-left: 100%; } }
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
 
 html {
-  font: 300 100%/1.5 futura-pt, Futura ND, sans-serif; }
+  font-size: 87.5%;
+  line-height: 1.4; }
+  @media all and (min-width: 64em) {
+    html {
+      font-size: 112.5%; } }
 
 body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  color: #444; }
+  font-family: "futura-pt", "Futura ND", "Trebuchet MS", Helvetica, sans-serif; }
 
-.typl8-tera {
-  font-size: 7.3125em;
-  margin-bottom: 4.875rem; }
-
-.typl8-giga {
-  font-size: 5.625em;
-  margin-bottom: 3.75rem; }
-
-.typl8-mega, h1 {
-  font-size: 4.5em;
-  margin-bottom: 3rem; }
-
-.typl8-alpha, h2 {
-  font-size: 3.75em;
-  margin-bottom: 2.5rem; }
-
-.typl8-beta, h3 {
-  font-size: 3em;
-  margin-bottom: 2rem; }
-
-.typl8-gamma, h4 {
-  font-size: 2.25em;
-  margin-bottom: 1.5rem; }
-
-.typl8-delta, h5 {
-  font-size: 1.5em;
-  margin-bottom: 1rem; }
-
-.typl8-epsilon {
-  font-size: 1.3125em;
-  margin-bottom: 0.875rem; }
-
-.typl8-zeta, h6 {
-  font-size: 1.125em;
-  margin-bottom: 0.75rem; }
-
-p {
-  margin: auto auto 1.5rem; }
-
-small {
-  font-size: 65%; }
-
-input,
-abbr,
-acronym,
-blockquote,
-code,
-kbd,
-q,
-samp,
-var {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none; }
-
-pre {
-  white-space: pre; }
-  pre code {
-    white-space: -moz-pre-wrap;
-    white-space: pre-wrap; }
-
-code {
-  white-space: pre;
-  font-family: monospace; }
-
-abbr {
-  -webkit-font-variant: small-caps;
-  -moz-font-variant: small-caps;
-  -ms-font-variant: small-caps;
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
-  color: gray; }
-  abbr[title]:hover {
-    cursor: help; }
-
-.typl8-drop-cap:first-letter {
-  float: left;
-  margin: 10px 10px 0 0;
-  padding: 0 20px;
-  font-size: 4em;
-  font-family: inherit;
-  line-height: 1;
-  text-indent: 0;
-  background: transparent;
-  color: inherit; }
-
-p + .typl8-drop-cap {
-  text-indent: 0;
-  margin-top: 0; }
-
-/**
- * Lining Definition Style Markup
- *
-  <dl class="typl8-lining">
-    <dt><b></b></dt>
-    <dd></dd>
-  </dl>
- *
- * Extend this object into your markup.
- *
- */
-.typl8-lining dt,
-.typl8-lining dd {
-  display: inline;
-  margin: 0; }
-
-.typl8-lining dt + dt:before,
-.typl8-lining dd + dt:before {
-  content: "\A";
-  white-space: pre; }
-
-.typl8-lining dd + dd:before {
-  content: ", "; }
-
-.typl8-lining dd:before {
-  content: ": ";
-  margin-left: -0.2rem; }
-
-/**
- * Dictionary Definition Style Markup
- *
-  <dl class="typl8-dictionary-style">
-    <dt><b></b></dt>
-    <dd></dd>
-  </dl>
- *
- * Extend this object into your markup.
- *
- */
-.typl8-dictionary-style dt {
-  display: inline;
-  counter-reset: definitions; }
-  .typl8-dictionary-style dt + dt:before {
-    content: ", ";
-    margin-left: -0.2rem; }
-
-.typl8-dictionary-style dd {
-  display: block;
-  counter-increment: definitions; }
-  .typl8-dictionary-style dd:before {
-    content: counter(definitions, decimal) ". "; }
-
-/**
- * Blockquote Markup
- *
-    <figure>
-      <blockquote cite="">
-        <p></p>
-      </blockquote>
-      <figcaption>
-        <cite>
-          <small><a href=""></a></small>
-        </cite>
-      </figcaption>
-    </figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Pull Quotes Markup
- *
-  <aside class="typl8-pull-quote">
-    <blockquote>
-      <p></p>
-    </blockquote>
-  </aside>
- *
- * Extend this object into your custom stylesheet.
- *
- */
-.typl8-pull-quote {
-  position: relative;
-  padding: 1em; }
-  .typl8-pull-quote:before, .typl8-pull-quote:after {
-    height: 1em;
-    opacity: 0.5;
-    position: absolute;
-    font-size: 4em;
-    color: #dc976e; }
-  .typl8-pull-quote:before {
-    content: '“';
-    top: 0;
-    left: 0; }
-  .typl8-pull-quote:after {
-    content: '”';
-    bottom: 0;
-    right: 0; }
-
-/**
- * Figures Markup
- *
-  <figure>
-    <figcaption>
-      <strong>Fig. X.X | </strong><cite title=""></cite>
-    </figcaption>
-  </figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Footnote Markup : Replace 'X' with your unique number for each footnote
- *
-  <article>
-    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
-    <footer>
-      <ol class="foot-notes">
-        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
-      </ol>
-    </footer>
-  </article>
- *
- * Extend this object into your markup.
- *
- */
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -809,6 +786,12 @@ h1, h2, h3, h4, h5, h6 {
   h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     font-weight: 500; }
 
-p {
-  margin-left: 0;
-  max-width: 36em; }
+pre, code {
+  font-family: "FiraCode-Regular", "Source Code Pro", Consolas, monospace;
+  background-color: #c5c2bb;
+  padding: 2px 4px;
+  border-radius: 2px; }
+
+input {
+  padding: 0.7em 1.4em;
+  border: 1px solid; }

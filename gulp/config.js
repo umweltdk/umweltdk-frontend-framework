@@ -6,5 +6,9 @@ module.exports = {
 		entry: 'lib/app.scss',
 		all: 'lib/**/*.scss',
 		dest: 'dist'
+	},
+	styleguide : {
+		entry : 'src/index.html',
+		dest : 'styleguide'
 	}
 };

@@ -1,34 +1,48 @@
 // Breakpoints
-$breakpoint-sm: '(min-width: 40em)' !default;
-$breakpoint-md: '(min-width: 52em)' !default;
-$breakpoint-lg: '(min-width: 64em)' !default;
-$breakpoint-xl: '(min-width: 2600px)' !default;
+$breakpoint-sm: '40em' !default;
+$breakpoint-md: '52em' !default;
+$breakpoint-lg: '64em' !default;
+$breakpoint-xl: '2600px' !default;
 
 $breakpoints: (
 	'sm' : $breakpoint-sm,
-	'md': $breakpoint-md,
+	'md': 	$breakpoint-md,
 	'lg' : $breakpoint-lg,
 	'xl' : $breakpoint-xl
 );
 
-/* @start color */
 $_color-base: #282828 !default;
 $_color-base-beige: #c5c2bb !default;
 $_color-base-pink: #ff0056 !default;
 $_color-base-blue: #64a0c3 !default;
-/* @end color */
-
-/* @start color */
-:root {
-	--_color-base: $_color-base;
-	--_color-base-beige: $_color-base-beige;
-	--_color-base-pink: $_color-base-pink;
-	--_color-base-blue: $_color-base-blue;
-}
-/* @end color */
 
 // typography
-$_font-family: "futura-pt", "Futura ND" !default;
-$_heading-font-family: $_font-family !default;
-$_monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
+$_font-family: 'futura-pt', 'Futura ND', 'Trebuchet MS', Helvetica, sans-serif !default;
+$_monospace-font-family: 'FiraCode-Regular', 'Source Code Pro', Consolas, monospace !default;
 $_paragraph-max-width : 36 !default;
+
+$typi: (
+	base: (
+		null: (14px, 1.4),
+		lg: (18px)
+	)
+);
+
+$typefaces: (
+	primary: (
+		font-size-ratio: 1,
+		stack: ($_font-family),
+		weights: (
+			light: 300,
+			normal: 500,
+			bold: 700
+		),
+	),
+	monospace: (
+		font-size-ratio: 1,
+		stack: ($_monospace-font-family),
+		weights: (
+			light: 100
+		),
+	)
+);

@@ -1,0 +1,50 @@
+@import 'functions';
+
+$total-columns: 12 !default;
+
+
+[class*="col-"] {
+	width: 100%;
+	float: left;
+}
+
+.dasda {
+	// width: grid-column-width(1)
+	// margin-left: grid-offset-length(1);
+	// @media #{map-get($breakpoints, 'sm')} {
+	// 	width: 100%;
+	// }
+}
+
+@for $i from 1 to ($total-columns+1) {
+	.col-#{$i} {
+		width:grid-column-width($i);
+	}
+}
+
+@each $name, $media in $breakpoints {
+	@include respond-to(#{$media}) {
+		@for $i from 1 to ($total-columns+1) {
+			.#{$name}-col-#{$i} {
+				width: grid-column-width($i);
+			}
+			.#{$name}-offset-#{$i} {
+				margin-left: grid-offset-length($i);
+			}
+		}
+	}
+}
+
+
+// Clearing
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Self Clearing Goodness
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}

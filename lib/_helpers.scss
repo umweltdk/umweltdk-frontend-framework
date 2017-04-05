@@ -4,3 +4,9 @@
 	&::-moz-placeholder { @content; }
 	&::-webkit-input-placeholder { @content; }
 }
+
+@mixin respond-to($breakpoint) {
+	@media (min-width: #{$breakpoint}) {
+		@content
+	}
+}
