@@ -48,6 +48,7 @@
   ],
   "dependencies": {
     "sanitize.css": "5.0.0",
-    "typeplate-starter-kit": "3.0.2"
+    "typeplate-starter-kit": "3.0.2",
+    "typi": "^3.0.0"
   }
 }
