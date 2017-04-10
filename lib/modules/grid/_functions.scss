@@ -1,7 +1,0 @@
-@function grid-column-width($n) {
-	@return ($n/$total-columns) * 100%;
-}
-
-@function grid-offset-length($n) {
-	@return grid-column-width($n);
-}

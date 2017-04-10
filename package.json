@@ -1,53 +1,52 @@
 {
-  "name": "umweltdk-frontend-framework",
-  "description": "A low level SASS based CSS framework for general usage on Umwelt.dk projects",
-  "version": "0.1.1",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/umweltdk/umweltdk-frontend-framework/issues",
-    "email": "kwa@umwelt.dk"
-  },
-  "main": "lib/app.scss",
+  "name": "umwelt.baseguide",
+  "description": "Lightweight and robust CSS framework for prototyping and production code.",
+  "version": "1.9.0",
   "scripts": {
-    "dev": "gulp dev",
-    "prod": "gulp prod"
-  },
-  "engines": {
-    "node": ">=4.2.3",
-    "npm": ">=2.14.7"
-  },
-  "author": {
-    "name": "Umwelt A/S",
-    "url": "https://umwelt.dk"
-  },
-  "contributors": [
-    {
-      "name": "KWA",
-      "email": "KWA@umwelt.dk"
-    }
-  ],
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "browser-sync": "2.18.8",
-    "del": "2.2.2",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-cssnano": "2.1.2",
-    "gulp-if": "2.0.2",
-    "gulp-inline-source": "^3.0.0",
-    "gulp-postcss": "6.4.0",
-    "gulp-sass": "3.1.0",
-    "run-sequence": "1.2.2"
+    "dev": "gulp default"
   },
   "keywords": [
-    "atomic css",
-    "functional css",
     "css",
-    "framework",
-    "oocss"
+    "sass",
+    "responsive",
+    "front-end",
+    "framework"
+  ],
+  "homepage": "http://umwelt.dk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umweltdk/umweltdk-frontend-framework.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "6.7.7",
+    "browser-sync": "2.18.8",
+    "gulp": "3.9.1",
+    "gulp-cache": "0.4.6",
+    "gulp-clean-css": "3.0.4",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "3.2.0",
+    "gulp-include": "2.3.1",
+    "gulp-load-plugins": "1.5.0",
+    "gulp-postcss": "6.4.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "2.5.1",
+    "gulp-uglify": "2.1.2",
+    "gulp-util": "3.0.8",
+    "postcss-scss": "0.4.1",
+    "stylelint": "7.10.1",
+    "stylelint-config-standard": "16.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "android >= 2.3",
+    "firefox esr",
+    "ie >= 9",
+    "safari >= 6"
   ],
   "dependencies": {
-    "sanitize.css": "5.0.0",
-    "typi": "3.0.0"
+    "normalize.css": "^6.0.0",
+    "sass-mq": "^3.3.2"
   }
 }
