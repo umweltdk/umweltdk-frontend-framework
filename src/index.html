@@ -7,7 +7,6 @@
 
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
 	<link rel="dns-prefetch" href="//use.typekit.net">
-	<!-- <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"> -->
 
 	<script>
 		WebFontConfig = {
@@ -24,8 +23,6 @@
 			s.parentNode.insertBefore(wf, s);
 		})(document);
 	</script>
-
-	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" asyns></script> -->
 
 	<style>
 		html, body {
@@ -99,20 +96,12 @@
 		}
 
 		.row.sg-skeleton > div[class*='col-'] {
-			padding:1rem 2rem;
-			margin:1rem 0;
-			position:relative;
+			margin-top:1rem;
+			margin-bottom:1rem;
+			padding-top:1rem;
+			padding-bottom:1rem;
+			text-align:center;
 			background-color:rgba(175, 175, 175, 1);
-		}
-		.row.sg-skeleton > div[class*='col-']:before {
-			content:"";
-			display:block;
-			position:absolute;
-			top:0.5rem;
-			right:0.5rem;
-			bottom:0.5rem;
-			left:0.5rem;
-			background-color:rgba(185, 185, 185, 1);
 		}
 
 	</style>
@@ -128,7 +117,13 @@
 			<nav>
 				<ul>
 					<li>
+						<a href="#colors">Colors</a>
+					</li>
+					<li>
 						<a href="#typography">Typography</a>
+					</li>
+					<li>
+						<a href="#grid">Grid</a>
 					</li>
 					<li>
 						<a href="#input">Input</a>
@@ -137,23 +132,7 @@
 			</nav>
 		</aside>
 		<main class="sg-skeleton">
-			<section name="grid">
-				<header class="sg-skeleton">
-					<h2>Colors</h2>
-					<p>Something smart</p>
-				</header>
-				<article>
-					<div class="row sg-skeleton">
-						<div class="col-12"></div>
 
-						<div class="col-11"></div>
-						<div class="col-1"></div>
-
-						<div class="col-10"></div>
-						<div class="col-2"></div>
-					</div>
-				</article>
-			</section>
 			<section name="colors">
 				<header class="sg-skeleton">
 					<h2>Colors</h2>
@@ -164,6 +143,7 @@
 					Something about color range..
 				</article>
 			</section>
+
 			<section name="typography">
 				<header class="sg-skeleton">
 					<h2>Typography</h2>
@@ -179,18 +159,77 @@
 				</article>
 			</section>
 
+			<section name="grid">
+				<header class="sg-skeleton">
+					<h2>Grid</h2>
+					<p>WIP</p>
+				</header>
+				<article>
+					<div class="row sg-skeleton">
+						<div class="col-12">col-12</div>
+
+						<div class="col-6">col-6</div>
+						<div class="col-6">col-6</div>
+
+						<div class="col-8">col-8</div>
+						<div class="col-4">col-4</div>
+
+						<div class="offset-10 col-2">offset-10 col-2</div>
+						<div class="offset-6 col-6">offset-6 col-6</div>
+					</div>
+				</article>
+			</section>
+
 			<section name="input">
 				<header class="sg-skeleton">
 					<h2>Input fields</h2>
 					<p>Something smart</p>
 				</header>
 				<article>
-					<input type="text" placeholder="Example of an text input">
+					<div class="row">
+						<div class="col-6">
+							<input id="text" type="text" placeholder="Example of an `text` input">
+						</div>
+
+						<div class="col-6">
+							<input id="text" type="email" placeholder="Example of an `email` input">
+						</div>
+
+						<div class="col-8">
+							<input id="text" type="search" placeholder="Example of an `search` input">
+						</div>
+
+						<div class="col-4">
+							<input id="text" type="number" placeholder="Example of an `number` input">
+						</div>
+						<div class="col-4">
+							<input id="text" type="url" placeholder="Example of an `url` input">
+						</div>
+						<div class="col-4">
+							<input id="text" type="tel" placeholder="Example of an `tel` input">
+						</div>
+
+						<div class="col-4">
+							<select name="" id="select" required>
+								<option value="" disabled selected hidden>Select your option</option>
+								<option value="">Value 1</option>
+								<option value="">Value 2</option>
+								<option value="">Value 3</option>
+								<option value="">Value 4</option>
+							</select>
+						</div>
+						<div class="col-8">
+							<select name="" id="select">
+								<option value="">Value 1</option>
+								<option value="">Value 2</option>
+								<option value="">Value 3</option>
+								<option value="">Value 4</option>
+							</select>
+						</div>
+					</div>
 				</article>
 			</section>
 		</main>
 	</section>
-
-	<!-- <script>hljs.initHighlightingOnLoad();</script> -->
 </body>
 </html>

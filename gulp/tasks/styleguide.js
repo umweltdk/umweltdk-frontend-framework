@@ -8,7 +8,7 @@ var gulpif = require('gulp-if');
 
 
 // Views task
-gulp.task('styleguide', function() {
+gulp.task('styleguide', ['styles'], function() {
 	return gulp.src(config.styleguide.entry)
 		.pipe(inlinesource())
 		.pipe(gulp.dest(config.styleguide.dest))

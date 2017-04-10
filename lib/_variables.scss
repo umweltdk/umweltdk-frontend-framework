@@ -16,6 +16,10 @@ $_color-base-beige: #c5c2bb !default;
 $_color-base-pink: #ff0056 !default;
 $_color-base-blue: #64a0c3 !default;
 
+// grid
+$total-columns: 12 !default;
+$gutter: true !default;
+
 // typography
 $_font-family: 'futura-pt', 'Futura ND', 'Trebuchet MS', Helvetica, sans-serif !default;
 $_monospace-font-family: 'FiraCode-Regular', 'Source Code Pro', Consolas, monospace !default;
