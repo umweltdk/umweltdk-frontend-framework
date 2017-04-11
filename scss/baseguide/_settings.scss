@@ -14,10 +14,12 @@ $headings: (
 	'h4, .h4', 'h5, .h5', 'h6, .h6'
 ) !default;
 
-$_color-base: #282828 !default;
-$_color-base-beige: #c5c2bb !default;
-$_color-base-pink: #ff0056 !default;
-$_color-base-blue: #64a0c3 !default;
+$umwelt-colors : (
+	base: #282828,
+	beige: #c5c2bb,
+	pink: #ff0056,
+	blue: #64a0c3
+) !default;
 
 $headings-spacing: 0.4em !default;
 $headings-font-family: inherit !default;
@@ -25,9 +27,9 @@ $headings-font-weight: 700 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: inherit !default;
 
-$text-color: #282828 !default;
-$link-color: #282828 !default;
-$link-hover-color: $_color-base-pink !default;
+$text-color: map-get($umwelt-colors, base) !default;
+$link-color: map-get($umwelt-colors, base) !default;
+$link-hover-color: map-get($umwelt-colors, pink) !default;
 $link-hover-decoration: none !default;
 
 
@@ -35,7 +37,7 @@ $link-hover-decoration: none !default;
 $button-selector: '.btn' !default;
 $button-padding-vertical: 0.375em !default;
 $button-padding-horizontal: 1em !default;
-$button-bg: #64a0c3 !default;
+$button-bg: map-get($umwelt-colors, blue) !default;
 $button-hover-bg: darken($button-bg, 10%) !default;
 $button-active-bg: $button-hover-bg !default;
 $button-color: #fff !default;
@@ -66,7 +68,7 @@ $input-padding-vertical: 0.375em !default;
 $input-padding-horizontal: 0.75em !default;
 $input-bg: #fff !default;
 $input-color: $text-color !default;
-$input-border-color: #b6b6b6 !default;
+$input-border-color: map-get($umwelt-colors, beige) !default;
 $input-focus-border-color: darken($input-border-color, 20%) !default;
 $input-border-radius: 0 !default;
 $input-transition: border-color 0.15s ease-out !default;

@@ -56,7 +56,7 @@ header + section {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	color:#fff;
-	background-color:$_color-base;
+	background-color:map-get($umwelt-colors, base);
 
 	@include mq(md) {
 		padding-top: 80px;
@@ -89,4 +89,8 @@ header + section {
 	margin-bottom: $grid-gutter;
 	padding: 1em;
 	background: #efefef;
+}
+
+hr {
+	margin:($grid-gutter/2) 0;
 }

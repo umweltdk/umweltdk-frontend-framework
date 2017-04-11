@@ -619,7 +619,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
   display: block;
   width: 100%;
   height: 2.375em;
-  border: 1px solid #b6b6b6;
+  border: 1px solid #c5c2bb;
   border-radius: 0;
   padding: 0.375em 0.75em;
   -webkit-background-clip: padding-box;
@@ -631,7 +631,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
 }
 
 input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, textarea:focus, select:focus {
-  border-color: #838383;
+  border-color: #969184;
   outline: 0;
 }
 
@@ -725,7 +725,7 @@ input[type="file"] {
   left: 0;
   width: 1em;
   height: 1em;
-  border: 1px solid #b6b6b6;
+  border: 1px solid #c5c2bb;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center center;
@@ -735,7 +735,7 @@ input[type="file"] {
 .checkbox input[type="checkbox"]:focus + label::before,
 .radio input[type="radio"] + label:hover::before,
 .radio input[type="radio"]:focus + label::before {
-  border-color: #838383;
+  border-color: #969184;
 }
 
 .checkbox input[type="checkbox"] + label:active::before,
@@ -816,7 +816,7 @@ input[type="file"] {
   display: inline-block;
   vertical-align: middle;
   padding: 0.375em 1em;
-  border: 1px solid transparent;
+  border: 0.1em solid transparent;
   border-radius: 0;
   background-color: #64a0c3;
   color: #fff;
@@ -832,6 +832,15 @@ input[type="file"] {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
+  /**
+	Sizes
+	 */
+  /**
+	Style
+	*/
+  /**
+	colors
+	*/
 }
 
 .btn:hover, .btn:focus {
@@ -850,6 +859,121 @@ input[type="file"] {
   opacity: 0.65;
   cursor: default;
   pointer-events: none;
+}
+
+.btn [class*="icon"] {
+  vertical-align: sub;
+  font-size: 1em;
+}
+
+.btn--xs {
+  font-size: 0.56278136em;
+}
+
+.btn--sm {
+  font-size: 0.75018755em;
+}
+
+.btn--md {
+  font-size: 1.333em;
+}
+
+.btn--lg {
+  font-size: 1.776889em;
+}
+
+.btn--outline {
+  color: #64a0c3;
+  border-color: #64a0c3;
+  background-color: transparent;
+}
+
+.btn--outline:hover, .btn--outline:focus {
+  background-color: #4488b0;
+  border-color: #4488b0;
+  color: #fff;
+}
+
+.btn--outline:active {
+  background-color: #4488b0;
+  border-color: #4488b0;
+  color: #fff;
+}
+
+.btn--base {
+  background-color: #282828;
+}
+
+.btn--base:hover, .btn--base:focus, .btn--base:active {
+  background-color: #0f0e0e;
+}
+
+.btn--base.btn--outline {
+  background-color: transparent;
+  border-color: #282828;
+  color: #282828;
+}
+
+.btn--base.btn--outline:hover, .btn--base.btn--outline:focus, .btn--base.btn--outline:active {
+  background-color: #282828;
+  color: #fff;
+}
+
+.btn--beige {
+  background-color: #c5c2bb;
+}
+
+.btn--beige:hover, .btn--beige:focus, .btn--beige:active {
+  background-color: #aea99f;
+}
+
+.btn--beige.btn--outline {
+  background-color: transparent;
+  border-color: #c5c2bb;
+  color: #c5c2bb;
+}
+
+.btn--beige.btn--outline:hover, .btn--beige.btn--outline:focus, .btn--beige.btn--outline:active {
+  background-color: #c5c2bb;
+  color: #fff;
+}
+
+.btn--pink {
+  background-color: #ff0056;
+}
+
+.btn--pink:hover, .btn--pink:focus, .btn--pink:active {
+  background-color: #cc0045;
+}
+
+.btn--pink.btn--outline {
+  background-color: transparent;
+  border-color: #ff0056;
+  color: #ff0056;
+}
+
+.btn--pink.btn--outline:hover, .btn--pink.btn--outline:focus, .btn--pink.btn--outline:active {
+  background-color: #ff0056;
+  color: #fff;
+}
+
+.btn--blue {
+  background-color: #64a0c3;
+}
+
+.btn--blue:hover, .btn--blue:focus, .btn--blue:active {
+  background-color: #4488b0;
+}
+
+.btn--blue.btn--outline {
+  background-color: transparent;
+  border-color: #64a0c3;
+  color: #64a0c3;
+}
+
+.btn--blue.btn--outline:hover, .btn--blue.btn--outline:focus, .btn--blue.btn--outline:active {
+  background-color: #64a0c3;
+  color: #fff;
 }
 
 .table {
@@ -2000,4 +2124,8 @@ header + section {
   margin-bottom: 30px;
   padding: 1em;
   background: #efefef;
+}
+
+hr {
+  margin: 15px 0;
 }
