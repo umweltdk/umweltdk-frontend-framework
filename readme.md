@@ -1,8 +1,8 @@
-# [Baseguide](http://basegui.de)
+# Umwelt Front-end Framework
 
-[![npm version](https://badge.fury.io/js/baseguide.svg)](https://badge.fury.io/js/baseguide)
+**Umwelt Front-end Framework** is a lightweight and robust CSS framework for prototyping and production code. It combines all essential components in a customizable and easy to use package.
 
-Baseguide is a lightweight and robust CSS framework for prototyping and production code. It combines all essential components in a customizable and easy to use package.
+*Based on [Baseguide](http://basegui.de)* 
 
 **Features**
 * Responsive and scalable components
@@ -28,35 +28,26 @@ Baseguide is a lightweight and robust CSS framework for prototyping and producti
 **Install from npm**
 
 ```sh
-npm install baseguide
+npm install git+https://github.com/umweltdk/umweltdk-frontend-framework.git@v2.0.2-beta
 ```
 
 **Clone the Repo**
 
 ```sh
-git clone -b master https://github.com/slavanga/baseguide
+git clone -b master https://github.com/umweltdk/umweltdk-frontend-framework.git
 ```
-
-**Load from CDN**
-
-[https://cdnjs.com/libraries/baseguide](https://cdnjs.com/libraries/baseguide)
-
-**Download**
-
-[https://github.com/slavanga/baseguide/archive/master.zip](https://github.com/slavanga/baseguide/archive/master.zip)
-
 
 ## Usage
 
 ### Sass
 
 Default variables can be changed before importing Baseguide.
-Take a look at the [_settings.scss](https://github.com/slavanga/baseguide/blob/master/scss/baseguide/_settings.scss) file to get an overview of all variables.
+Take a look at the [_settings.scss](https://github.com/umweltdk/umweltdk-frontend-framework/blob/v2.x/src/_settings.scss) file to get an overview of all variables.
 
 ```scss
 $button-bg: #bada55; // 1. Customize default variables
 
-@import 'baseguide'; // 2. Import Baseguide
+@import 'umweltdk-frontend-framework'; // 2. Import Umwelt Framework
 
 // 3. Add your own styles here
 ```
