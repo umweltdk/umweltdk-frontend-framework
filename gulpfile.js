@@ -18,7 +18,7 @@ gulp.task('html', function() {
 
 // Compile and autoprefix stylesheets
 gulp.task('styles', function() {
-	return gulp.src(config.src + 'scss/**/*.scss')
+	return gulp.src(config.src + 'src/**/*.scss')
 		.pipe($.if(config.sourcemaps, $.sourcemaps.init()))
 		.pipe($.sass({
 			includePaths: [
@@ -44,7 +44,7 @@ gulp.task('styles', function() {
 
 // Lint stylesheets
 gulp.task('stylelint', function() {
-	return gulp.src(config.src + 'scss/**/*.scss')
+	return gulp.src(config.src + 'src/**/*.scss')
 		.pipe($.postcss([
 			require('stylelint')
 		], {
@@ -80,7 +80,7 @@ gulp.task('serve', ['build'], function() {
 // Watch files for changes
 gulp.task('watch', function() {
 	gulp.watch('*.html', ['html']);
-	gulp.watch(config.src + 'scss/**/*.scss', ['styles']);
+	gulp.watch(config.src + 'src/**/*.scss', ['styles']);
 	gulp.watch(config.src + 'img/**/*.{gif,jpg,png,svg}', ['images']);
 });
 
