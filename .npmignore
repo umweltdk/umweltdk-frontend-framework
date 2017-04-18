@@ -1,8 +1,2 @@
-scss/baseguide-demo.scss
+src/demo.scss
 index.html
-
-# Editor files
-.editorconfig
-.gitignore
-.gitattributes
-gulpfile.js
