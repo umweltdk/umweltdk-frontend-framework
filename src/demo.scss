@@ -5,9 +5,7 @@ $mq-breakpoints: (
 	lg: 960px
 );
 
-@import 'baseguide';
-
-@import 'hive/index';
+@import 'framework';
 
 html, body {
 	margin:0;
