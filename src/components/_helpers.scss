@@ -46,11 +46,11 @@
 }
 
 .media-left {
-	padding-right: $spacing-base;
+	padding-right: ($grid-gutter/2);
 }
 
 .media-right {
-	padding-left: $spacing-base;
+	padding-left: ($grid-gutter/2);
 }
 
 .media-left,

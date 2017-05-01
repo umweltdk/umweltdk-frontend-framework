@@ -17,6 +17,14 @@ body {
 	&:first-child {
 		margin-top: 0;
 	}
+
+	&.light {
+		font-weight:100;
+	}
+
+	&.medium {
+		font-weight:500;
+	}
 }
 
 @include scale-headings;
