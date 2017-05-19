@@ -57,15 +57,14 @@ textarea {
 	line-height: 1.45;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
 	position: absolute;
-	margin-top: 0.25em;
+	margin-top: .25em;
 	line-height: normal;
 
 	+ label {
-		padding: 0;
-		padding-left: 20px;
+		padding: 0 0 0 20px;
 		font-weight: inherit;
 		cursor: pointer;
 	}
@@ -80,7 +79,6 @@ input[type="file"] {
 	display: block;
 }
 
-
 // placeholder
 [placeholder].placeholder {
 	color: $placeholder-color;
@@ -90,7 +88,6 @@ input[type="file"] {
 	color: $placeholder-color;
 	opacity: 1;
 }
-
 
 // custom form controls
 @if $use-custom-forms {
@@ -105,9 +102,9 @@ input[type="file"] {
 		}
 
 		+ label::before {
-			content: '';
+			content: "";
 			position: absolute;
-			top: 0.1875em;
+			top: .1875em;
 			left: 0;
 			width: 1em;
 			height: 1em;
@@ -117,8 +114,8 @@ input[type="file"] {
 			background-position: center center;
 		}
 
-		+ label:hover::before,
-		&:focus + label::before {
+		&:focus + label::before,
+		+ label:hover::before {
 			border-color: $input-focus-border-color;
 		}
 
@@ -149,8 +146,7 @@ input[type="file"] {
 		background-image: url($icon-checkbox), linear-gradient(transparent, transparent);
 	}
 
-
-	.select {
+	.select:not(.select--multiple) {
 		position: relative;
 
 		select {
@@ -170,7 +166,7 @@ input[type="file"] {
 
 		&::after {
 			/* autoprefixer: off */
-			content: '';
+			content: "";
 			pointer-events: none;
 			position: absolute;
 			z-index: 1;
