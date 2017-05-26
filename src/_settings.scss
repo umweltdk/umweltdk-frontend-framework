@@ -1,9 +1,12 @@
 // Typography and Spacing
-$font-family-base: 'futura-pt', 'Futura ND', 'Trebuchet MS', Helvetica, sans-serif !default;
+$font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
+$font-family-heading: 'futura-pt', 'Futura ND', 'Trebuchet MS', Helvetica, sans-serif !default;
 $font-family-mono: 'Source Code Pro', Consolas, monospace;
 
 $font-size-base: 1em !default;
 $font-weight-base: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-light: 100 !default;
 $font-antialiased: true !default;
 $line-height-base: 1.5 !default;
 $spacing-base: 1.5em !default;

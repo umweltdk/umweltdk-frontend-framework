@@ -7,23 +7,24 @@ body {
 }
 
 #{$headings} {
-	margin-top: $headings-spacing * 2;
-	margin-bottom: $headings-spacing;
-	font-family: $headings-font-family;
-	font-weight: $headings-font-weight;
-	line-height: $headings-line-height;
 	color: $headings-color;
+	font-family: $font-family-heading;
+	font-weight: $headings-font-weight;
+	letter-spacing: 0.02em;
+	line-height: $headings-line-height;
+	margin-bottom: $headings-spacing;
+	margin-top: $headings-spacing * 2;
 
 	&:first-child {
 		margin-top: 0;
 	}
 
 	&.light {
-		font-weight:100;
+		font-weight:$font-weight-light;
 	}
 
 	&.medium {
-		font-weight:500;
+		font-weight:$font-weight-medium;
 	}
 }
 
