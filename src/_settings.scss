@@ -47,7 +47,7 @@ $button-disabled-opacity: .65 !default;
 // Forms
 $use-custom-forms: true !default;
 
-$input-selector: ( 'input[type="email"]', 'input[type="number"]', 'input[type="password"]', 'input[type="search"]', 'input[type="tel"]', 'input[type="text"]', 'input[type="url"]', 'textarea', 'select' ) !default;
+$input-selector: ( 'input[type="email"]', 'input[type="date"]', 'input[type="number"]', 'input[type="password"]', 'input[type="search"]', 'input[type="tel"]', 'input[type="text"]', 'input[type="url"]', 'textarea', 'select' ) !default;
 
 $input-height: 2.375em !default;
 $input-padding-vertical: .375em !default;
