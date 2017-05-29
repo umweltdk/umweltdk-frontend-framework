@@ -1,7 +1,7 @@
 {
   "name": "umweltdk-frontend-framework",
   "description": "Lightweight and robust CSS framework for prototyping and production code.",
-  "version": "2.0.6-beta",
+  "version": "2.0.61-beta",
   "scripts": {
     "prod": "gulp build",
     "dev": "gulp default"
