@@ -7,7 +7,7 @@
 }
 
 .col {
-	@include column-base;
+	@include column-base($size: auto);
 }
 
 // Generate columns for all breakpoints
