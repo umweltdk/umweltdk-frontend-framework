@@ -28,7 +28,7 @@
 **Install from npm**
 
 ```sh
-npm install git+https://github.com/umweltdk/umweltdk-frontend-framework.git@v2.0.2-beta
+npm install git+https://github.com/umweltdk/umweltdk-frontend-framework.git@release/v.3.x
 ```
 
 **Clone the Repo**
@@ -140,7 +140,6 @@ It’s a powerful tool that for example allows the generation of additional resp
   }
 }
 ```
-
 
 ## Grid
 The grid system is inspired by [Bootstrap](https://getbootstrap.com/css/#grid).

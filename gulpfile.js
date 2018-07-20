@@ -22,7 +22,8 @@ gulp.task('styles', function() {
 		.pipe($.if(config.sourcemaps, $.sourcemaps.init()))
 		.pipe($.sass({
 			includePaths: [
-				'node_modules/'
+				'node_modules/',
+				'node_modules/baseguide/scss/'
 			],
 			precision: 8,
 			outputStyle: 'expanded'

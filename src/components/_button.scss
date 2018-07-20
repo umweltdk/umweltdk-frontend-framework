@@ -1,0 +1,41 @@
+#{$button-selector} {
+	[class*="icon"] {
+	    vertical-align: text-bottom;
+	    font-size: 1em;
+	}
+
+	&--xs {
+		font-size: modular-scale(-1.25);
+	}
+
+	&--sm {
+		font-size: modular-scale(-1);
+	}
+
+	&--md {
+		font-size: modular-scale(1);
+	}
+
+	&--lg {
+		font-size: modular-scale(1.25);
+	}
+
+
+	&--outline {
+		color: $button-bg;
+		border-color: $button-bg;
+		background-color: $button-border-color;
+		&:hover,
+		&:focus {
+			background-color: $button-hover-bg;
+			border-color: $button-hover-bg;
+			color: $button-hover-color;
+		}
+		&:active {
+			background-color: $button-active-bg;
+			border-color: $button-active-bg;
+			color: $button-active-color;
+		}
+	}
+
+}

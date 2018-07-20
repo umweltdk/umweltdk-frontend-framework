@@ -13,22 +13,34 @@
 		<link rel="dns-prefetch" href="//fonts.googleapis.com">
 
 		<script>
-			WebFontConfig = {
-				typekit: {
-					id: 'wjw4xnk'
-				},
-				google: {
-					families: ['Material+Icons']
-				},
-				classes: false
-			};
-			(function(d) {
+			// FIXME: Is this the right way to put it?
+			var loadFont = function (d) {
+				WebFontConfig = {
+					typekit: {
+						id: 'wjw4xnk'
+					},
+					google: {
+						families: ['Material+Icons']
+					},
+					classes: false
+				};
+
 				var wf = d.createElement('script'),
 					s = d.scripts[0];
-				wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
 				wf.async = true;
 				s.parentNode.insertBefore(wf, s);
-			})(document);
+			}
+
+			if ('connection' in navigator || 'mozConnection' in navigator || 'webkitConnection' in navigator) {
+				var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+				if ('downlink' in connection && connection.downlink >= 2.5) {
+					loadFont(document);
+				}
+			} else {
+				loadFont(document);
+			}
 		</script>
 
 		<link rel="stylesheet" href="dist/css/demo.min.css">
@@ -326,58 +338,6 @@
 			</div>
 		</section>
 
-		<section class="section" id="embeds">
-			<div class="container">
-				<h2 class="section__title">Embeds and Media</h2>
-
-				<div class="row">
-					<div class="col col-md-6">
-						<div class="embed-responsive spacing-bottom">
-							<iframe src="https://player.vimeo.com/video/23237102?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="col col-md-6 deck">
-						<div class="card media">
-							<div class="media-left">
-								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAChklEQVR4nO3X0U7iQACFYd//CSS2VgtESUm0GARSIQQoSjvvdPZisbHsImRjssf4X/whMxczZL52AhchBJFPF//7CxAg1gFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZlmC1HV91txXrPtVa397kM1moyiKNJvNmrmqqnR3d6c0TbXZbJr5oiiUJInyPD9r7TRNlWVZay7PcyVJoqIoTu73I0FCCHp4eGiBzOdzZVmm5+fn1uGnaaqyLBXHsaqqauZfX19bn4frvI93u52ur6+1Xq/V7XZP7gfIfjyZTPT4+KiiKFoHGkWR6rrWzc2NttutQvh9zfR6PQ0Ggz8O8xCkLEuladrAnNoPkP14PB4rz3O9vLxoMBg081dXVwoh6Pb2tnW1jEYjXV5earlcfgry/mbsdjtFUXRyP0D24+l02jyxw+GwmY/jWHVdK0mS5nqq61p5nqssS43H409B3t+Qt7e31htybD9A9uPFYqH7+3s9PT1pNBo1891uV6vVqrm6Tq17CFJVleI41nK5VL/fP7kfIB8OLkkSRVHUupqm06k6nc7ZT/EhSAhBWZap0+mctd+PBTnW396Cj7+u/rVja/A/hAD5LgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBm/QJ7sycEPKoJDQAAAABJRU5ErkJggg==" alt="..." class="img-round">
-							</div>
-							<div class="media-body card__body">
-								<p>
-									<a href="#">Esben Sohl</a> updated <a href="#">umwelt.dk</a> project in <a href="#">Umwelt organization</a>
-								</p>
-
-								<p><time datetime="2008-02-14 20:00">2 hours ago</time></p>
-							</div>
-						</div>
-						<div class="card media">
-							<a class="media-left" href="#">
-								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAChklEQVR4nO3X0U7iQACFYd//CSS2VgtESUm0GARSIQQoSjvvdPZisbHsImRjssf4X/whMxczZL52AhchBJFPF//7CxAg1gFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZlmC1HV91txXrPtVa397kM1moyiKNJvNmrmqqnR3d6c0TbXZbJr5oiiUJInyPD9r7TRNlWVZay7PcyVJoqIoTu73I0FCCHp4eGiBzOdzZVmm5+fn1uGnaaqyLBXHsaqqauZfX19bn4frvI93u52ur6+1Xq/V7XZP7gfIfjyZTPT4+KiiKFoHGkWR6rrWzc2NttutQvh9zfR6PQ0Ggz8O8xCkLEuladrAnNoPkP14PB4rz3O9vLxoMBg081dXVwoh6Pb2tnW1jEYjXV5earlcfgry/mbsdjtFUXRyP0D24+l02jyxw+GwmY/jWHVdK0mS5nqq61p5nqssS43H409B3t+Qt7e31htybD9A9uPFYqH7+3s9PT1pNBo1891uV6vVqrm6Tq17CFJVleI41nK5VL/fP7kfIB8OLkkSRVHUupqm06k6nc7ZT/EhSAhBWZap0+mctd+PBTnW396Cj7+u/rVja/A/hAD5LgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBm/QJ7sycEPKoJDQAAAABJRU5ErkJggg==" alt="..." class="img-round">
-							</a>
-							<div class="media-body card__body">
-								<p>
-									<a href="#">Esben Sohl</a> updated <a href="#">umwelt.dk</a> project in <a href="#">Umwelt organization</a>
-								</p>
-
-								<p><time datetime="2008-02-14 20:00">2 hours ago</time></p>
-							</div>
-						</div>
-						<div class="card media">
-							<a class="media-left" href="#">
-								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAChklEQVR4nO3X0U7iQACFYd//CSS2VgtESUm0GARSIQQoSjvvdPZisbHsImRjssf4X/whMxczZL52AhchBJFPF//7CxAg1gFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZlmC1HV91txXrPtVa397kM1moyiKNJvNmrmqqnR3d6c0TbXZbJr5oiiUJInyPD9r7TRNlWVZay7PcyVJoqIoTu73I0FCCHp4eGiBzOdzZVmm5+fn1uGnaaqyLBXHsaqqauZfX19bn4frvI93u52ur6+1Xq/V7XZP7gfIfjyZTPT4+KiiKFoHGkWR6rrWzc2NttutQvh9zfR6PQ0Ggz8O8xCkLEuladrAnNoPkP14PB4rz3O9vLxoMBg081dXVwoh6Pb2tnW1jEYjXV5earlcfgry/mbsdjtFUXRyP0D24+l02jyxw+GwmY/jWHVdK0mS5nqq61p5nqssS43H409B3t+Qt7e31htybD9A9uPFYqH7+3s9PT1pNBo1891uV6vVqrm6Tq17CFJVleI41nK5VL/fP7kfIB8OLkkSRVHUupqm06k6nc7ZT/EhSAhBWZap0+mctd+PBTnW396Cj7+u/rVja/A/hAD5LgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBmAWIWIGYBYhYgZgFiFiBm/QJ7sycEPKoJDQAAAABJRU5ErkJggg==" alt="..." class="img-round">
-							</a>
-							<div class="media-body card__body">
-								<p>
-									<a href="#">Esben Sohl</a> updated <a href="#">umwelt.dk</a> project in <a href="#">Umwelt organization</a>
-								</p>
-
-								<p><time datetime="2008-02-14 20:00">2 hours ago</time></p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
 
 		<section class="section" id="tables">
 			<div class="container">

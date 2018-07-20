@@ -7,9 +7,38 @@ $mq-breakpoints: (
 
 @import 'framework';
 
+@import 'baseguide/tools/grid/gutter';
+@import 'baseguide/tools/grid/container';
+@import 'baseguide/tools/grid/row';
+@import 'baseguide/tools/grid/column';
+
+// Objects
+@import 'baseguide/objects/list';
+@import 'baseguide/objects/grid';
+// Components
+@import 'baseguide/components/form';
+@import 'baseguide/components/form-custom';;
+@import 'baseguide/components/table';
+// Utilities
+@import 'baseguide/utilities/position';
+@import 'baseguide/utilities/clearfix';
+@import 'baseguide/utilities/text';
+@import 'baseguide/utilities/visibility';
+@import 'baseguide/utilities/screenreader';
+
 html, body {
 	margin:0;
 	padding:0;
+}
+
+html {
+	font-size: 16px;
+	@media screen and (min-width: 320px) {
+		font-size: calc(16px + 4 * ((100vw - 320px) / 680));
+	}
+	@media screen and (min-width: 1024px) {
+		font-size: 20px;
+	}
 }
 
 body {
@@ -54,7 +83,7 @@ header + section {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	color:#fff;
-	background-color:map-get($umwelt-colors, base);
+	background-color: #111;
 
 	@include mq(md) {
 		padding-top: 80px;
@@ -63,7 +92,6 @@ header + section {
 }
 
 .intro__title {
-	font-weight: 500;
 	font-size: 2.5em;
 
 	@include mq(sm) {
