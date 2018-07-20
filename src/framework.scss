@@ -1,25 +1,19 @@
 // Settings
 @import 'settings'; // Umwelt
-
-@import 'baseguide/settings/settings';
+@import './node_modules/baseguide/scss/baseguide/settings/settings';
 // Tools
-@import 'baseguide/tools/mq';
-@import 'baseguide/tools/functions';
-@import 'baseguide/tools/mixins';
-@import 'baseguide/tools/animation';
-
+@import './node_modules/baseguide/scss/baseguide/tools/mq';
+@import './node_modules/baseguide/scss/baseguide/tools/functions';
+@import './node_modules/baseguide/scss/baseguide/tools/mixins';
+@import './node_modules/baseguide/scss/baseguide/tools/animation';
 // Base
-@import 'baseguide/base/normalize';
-@import 'baseguide/base/base';
-@import 'baseguide/base/global';
-@import 'baseguide/base/spacing';
-@import 'baseguide/base/headings';
-@import 'baseguide/base/link';
+@import './node_modules/baseguide/scss/baseguide/base/normalize';
+@import './node_modules/baseguide/scss/baseguide/base/base';
+@import './node_modules/baseguide/scss/baseguide/base/global';
+@import './node_modules/baseguide/scss/baseguide/base/spacing';
+@import './node_modules/baseguide/scss/baseguide/base/headings';
+@import './node_modules/baseguide/scss/baseguide/base/link';
 @import 'base/typography'; // Umwelt
-
 // Components
-@import 'baseguide/components/button';
+@import './node_modules/baseguide/scss/baseguide/components/button';
 @import 'components/button'; // Umwelt
-
-
-
